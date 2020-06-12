@@ -1,1 +1,40 @@
-<p>groups works!</p>
+
+<div class="container p-3 card mt-5">
+    <div class="row">
+        <div class="col-6">
+            <h5 class="text-info">Groups</h5>
+            <ul class="list-group">
+                <li class="list-group-item active">
+                    <input placeholder="Search" [(ngModel)]="searchCriteria" type="text" name="" id="" class="form-control">
+                </li>
+                <li  draggable [dragData]="group" class="list-group-item" *ngFor="let group of groups|searchPipe:  searchCriteria">{{group.name}}</li>
+              </ul>
+        </div>
+        <div class="col-6">      
+            <br>
+            <ul class="list-group group-detail" droppable (onDrop)="onDrop($event)">
+                <li class="list-group-item active description fixed navbar-fixed-top">
+                    <div *ngIf="this.employees.length>0">
+                        <input type="checkbox" name="" id="" (change)="selectAll()"  checked>
+                    <span class="text-light">  {{groupNameAdded}} </span>
+                    <button class="btn btn-outline-light" (click)="removeGroups()">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                    </div>
+                </li>                
+                <li class="list-group-item" *ngFor="let employee of employees"  >
+                    <input type="checkbox" name="" id="" [(ngModel)]="employee.selected">
+                    <span class="text-dark"> {{' '+employee.name}}</span>
+                </li>
+              
+              </ul>
+              <div class="col-12 text-right">
+                  <br>
+                  <button *ngIf="this.employees && this.employees.length>=0" class="btn btn-info" (click)="showSelected()">
+                    Continue  
+                    <i class="fa fa-arrow-right"></i> 
+                  </button>
+              </div>
+        </div>
+    </div>
+</div>

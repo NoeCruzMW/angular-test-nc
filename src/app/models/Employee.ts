@@ -2,5 +2,6 @@ export interface Employee{
     id?: number;
     name: string;
     last_name: string;
-    birthday: number|string;    
+    birthday: number|string;
+    selected: boolean;
 }
