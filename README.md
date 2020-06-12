@@ -1,14 +1,23 @@
-# AngularTestNoecl
+# Angular Test Noe Cruz 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+
+## Requirements
+You need [node.js](http://nodejs.org) with [npm](http://npmjs.com) on your machine.
+For some automatically npm builds you will even need a version of [python](http://www.python.org) installed, but this is not necessary to run the app itself.
+
+## Installation
+This app will install all required dependencies automatically. 
+Just start the commands below in the root folder where you stored the package.
+```SH
+$ npm install
+```
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
