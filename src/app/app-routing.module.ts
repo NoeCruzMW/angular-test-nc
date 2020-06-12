@@ -14,6 +14,9 @@ const routes: Routes = [
   },
   {
     path: 'groups', component: GroupsComponent
+  },
+  {
+    path: '**', redirectTo:""
   }
 ];
 
